@@ -10,12 +10,6 @@ export default defineUserConfig({
   port: '8088', 
   description: '探索音视频领域的知识宝库',
   head: [['link', { rel: 'icon', href: '/images/logo.jpeg' }]],
-  repo: 'https://github.com/yangkun19921001/AudioVideoBlogDoc',
-  docsDir: 'docs/pages',
-  docsBranch: 'main',
-  editLink: true,
-  editLinkPattern: ':repo/edit/:branch/:path',
-  editLinkText: 'Edit this page',
 
   // 新增导航条的配置
   theme: defaultTheme({
@@ -92,6 +86,12 @@ export default defineUserConfig({
       //   ],
       // },
     ],
+    repo: 'https://github.com/yangkun19921001/AudioVideoBlogDoc',
+    docsDir: 'docs/',
+    docsBranch: 'main',
+    editLink: true,
+    editLinkPattern: ':repo/edit/:branch/:path',
+    editLinkText: 'Edit this page',
     // 新增 侧边栏
     sidebar: {
       // '/pages/project/': [
