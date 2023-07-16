@@ -1,6 +1,8 @@
-/node_modules 
+node_modules/
 .temp 
 .cache 
 .DS_Store
 package-lock.json
-/docs/.vuepress
+/docs/.vuepress/dist
+/docs/.vuepress/.cache
+/docs/.vuepress/.temp
