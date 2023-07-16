@@ -104,9 +104,9 @@ export default defineUserConfig({
           children: [
             'WebRTC源码分析(一)Android相机采集'
           ,'WebRTC源码分析(二)Android视频硬件编码'
-          ,'WebRTC 源码分析 (三) PeerConnection Client '
+          ,'WebRTC 源码分析 (三) PeerConnection Client'
           ,'WebRTC P2P 从原理到应用'
-          ,'WebRTC实战:P2P 音视频通话'
+          ,'WebRTC实战:P2P音视频通话'
           ,'WebRTC实战:P2P架构的多人音视频通话解决方案'
           ,'WebRTC实战:QT for Windows 实现多人音视频通话'
           ,'WebRTC实战:mediasoup架构的多人音视频通话解决方案'
