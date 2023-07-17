@@ -121,4 +121,19 @@ export default defineUserConfig({
       
     },
   }),
+
+  plugins: [
+    [
+      'vuepress-plugin-gitalk',
+      {
+        clientID: '8240b6f80231715bb6ad',
+        clientSecret: 'a49a89f74cb5f8175dc31a8259304e9da2247e25',
+        repo: 'AudioVideoBlogDoc',
+        owner: 'yangkun19921001',
+        admin: ['yangkun19921001'],
+        distractionFreeMode: true,
+        pagerDirection: 'last', 
+      },
+    ],
+  ],
 });
