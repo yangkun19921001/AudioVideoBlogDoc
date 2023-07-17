@@ -8,7 +8,5 @@
 
 
 
-<ClientOnly>
-  <Gitalk />
-</ClientOnly>
+<Gitalk />
 
