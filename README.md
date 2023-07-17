@@ -9,5 +9,5 @@
 </p>
 
 <p align="center">
-  <a href="https://yangkun19921001.github.io/AudioVideoBlog/pages/home.html" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; text-align: center; display: inline-block;">👉🏻开始探索</a>
+  <a href="https://yangkun19921001.github.io/AudioVideoBlog" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; text-align: center; display: inline-block;">👉🏻开始探索</a>
 </p>
