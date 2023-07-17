@@ -67,10 +67,10 @@ export default defineUserConfig({
       mapping: 'url',
       reactionsEnabled: false,
       emitMetadata: true,
-      theme: 'dark',
-      inputPosition: 'top',
-      lang: 'en',
-      lazyLoading: false
+      theme: 'light',
+      inputPosition: 'bottom',
+      lang: 'zh-CN',
+      lazyLoading: true
   })
   ],
 });
