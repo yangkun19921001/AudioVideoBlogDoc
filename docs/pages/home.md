@@ -9,5 +9,6 @@
 
 
 <ClientOnly>
-  <Gitalk/>
+  <Gitalk />
 </ClientOnly>
+
