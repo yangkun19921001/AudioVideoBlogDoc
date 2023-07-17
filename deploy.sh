@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-
+# windows 请在 git bash here 中执行
 # 确保脚本抛出遇到的错误
 set -e
 
