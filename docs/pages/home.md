@@ -8,5 +8,5 @@
 
 
 
-<Gitalk />
+<GiscusComment/>
 

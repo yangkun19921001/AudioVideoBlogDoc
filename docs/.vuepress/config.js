@@ -1,6 +1,7 @@
 import { defineUserConfig, defaultTheme } from 'vuepress';
-
-
+//const { commentPlugin } = require("vuepress-plugin-comment2");
+//import {commentPlugin } from "vuepress-plugin-comment2";
+import {GiscusCommentPlugin} from 'vuepress-plugin-giscus-comment';
 
 
 export default defineUserConfig({
@@ -18,73 +19,8 @@ export default defineUserConfig({
 
     // 顶部导航条   
     navbar: [
-      {
-        text: '首页',
-        link: '/pages/home.md',
-      },
-      // {
-      //   text: '基础概念',
-      //   link: '/pages/base/a.md',
-      // },
-      // {
-      //   text: 'OpenGL',
-      //   link: '/pages/opengl/README.md',
-      // },
-      // {
-      //   text: 'FFmpeg',
-      //   link: '/pages/ffmpeg/README.md',
-      // },
-      {
-        text: 'WebRTC',
-        link: '/pages/webrtc/WebRTC源码分析(一)Android相机采集.md',
-      },
-      // {
-      //   text: 'GStreamer',
-      //   link: '/pages/gstreamer/README.md',
-      // },
-      // {
-      //   text: '音视频处理',
-      //   children: [
-      //     {
-      //       text: '采集',
-      //       link: '/pages/capture/install_guide.md',
-      //       // 该元素将一直处于激活状态
-      //       activeMatch: '/pages/capture/install_guide.md',
-      //     },
-      //     {
-      //       text: '编解码',
-      //       link: '/pages/codec/detail_usage.md',
-      //       activeMatch: '/pages/codec/detail_usage.md',
-      //     },
-      //     {
-      //       text: '渲染',
-      //       link: '/pages/render/other.md',
-      //     }
-      //   ],
-      // },
-      // {
-      //   text: '流媒体协议',
-      //   link: '/pages/stream/README.md',
-      // },
-      // {
-      //   text: '解决方案',
-      //   children: [
-      //     {
-      //       text: '音视频通话',
-      //       link: '/pages/project/1.音视频通话.md',
-      //       // 该元素将一直处于激活状态
-      //       activeMatch: '/pages/project/1.音视频通话.md',
-      //     },
-      //     {
-      //       text: '云游戏',
-      //       link: '/pages/project/other.md',
-      //     },
-      //     {
-      //       text: '远程控制',
-      //       link: '/pages/project/other.md',
-      //     },
-      //   ],
-      // },
+      {text: '首页', link: '/pages/home.md',},
+      {text: 'WebRTC',link: '/pages/webrtc/WebRTC源码分析(一)Android相机采集.md',},
     ],
     repo: 'https://github.com/yangkun19921001/AudioVideoBlogDoc',
     docsDir: 'docs/',
@@ -94,11 +30,6 @@ export default defineUserConfig({
     editLinkText: 'Edit this page',
     // 新增 侧边栏
     sidebar: {
-      // '/pages/project/': [
-      //   {
-      //     children: ['1.音视频通话.md','2.P2P架构的多人音视频通话.md','3.SFU架构的多人音视频通话.md'],
-      //   },
-      // ],
       '/pages/webrtc/': [
         {
           children: [
@@ -113,27 +44,33 @@ export default defineUserConfig({
         ],
         },
       ], 
-      // '/pages/base/': [
-      //   {
-      //     children: ['a.md','b.md'],
-      //   },
-      // ],
-      
     },
   }),
 
   plugins: [
-    [
-      'vuepress-plugin-gitalk',
-      {
-        clientID: '8240b6f80231715bb6ad',
-        clientSecret: 'a49a89f74cb5f8175dc31a8259304e9da2247e25',
-        repo: 'AudioVideoBlogDoc',
-        owner: 'yangkun19921001',
-        admin: ['yangkun19921001'],
-        distractionFreeMode: true,
-        pagerDirection: 'last', 
-      },
-    ],
+    // vuepress-plugin-comment2评论与阅读量插件
+    // commentPlugin({
+    //   // 插件选项
+    //   provider: "Giscus", //评论服务提供者。
+    //   comment: true, //启用评论功能
+    //   repo: "yangkun19921001/AudioVideoBlogDoc", //远程仓库
+    //   repoId: "R_kgDOJ8K9Rw", //对应自己的仓库Id
+    //   category: "Announcements",
+    //   categoryId: "DIC_kwDOJ8K9R84CX7pr" //对应自己的分类Id
+    // }),
+
+    new GiscusCommentPlugin({
+      repo: 'yangkun19921001/AudioVideoBlogDoc',
+      repoId: 'R_kgDOJ8K9Rw',
+      category: 'Announcements',
+      categoryId: 'DIC_kwDOJ8K9R84CX7pr',
+      mapping: 'url',
+      reactionsEnabled: false,
+      emitMetadata: true,
+      theme: 'dark',
+      inputPosition: 'top',
+      lang: 'en',
+      lazyLoading: false
+  })
   ],
 });
