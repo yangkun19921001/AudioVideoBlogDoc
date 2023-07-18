@@ -1,7 +1,6 @@
-import { defineUserConfig, defaultTheme } from 'vuepress';
-//const { commentPlugin } = require("vuepress-plugin-comment2");
-//import {commentPlugin } from "vuepress-plugin-comment2";
-import {GiscusCommentPlugin} from 'vuepress-plugin-giscus-comment';
+import { defineUserConfig } from "@vuepress/cli";
+import { defaultTheme } from "@vuepress/theme-default";
+import { commentPlugin } from "vuepress-plugin-comment2";
 
 
 export default defineUserConfig({
@@ -58,19 +57,8 @@ export default defineUserConfig({
     //   category: "Announcements",
     //   categoryId: "DIC_kwDOJ8K9R84CX7pr" //对应自己的分类Id
     // }),
-
-    new GiscusCommentPlugin({
-      repo: 'yangkun19921001/AudioVideoBlogDoc',
-      repoId: 'R_kgDOJ8K9Rw',
-      category: 'Announcements',
-      categoryId: 'DIC_kwDOJ8K9R84CX7pr',
-      mapping: 'url',
-      reactionsEnabled: false,
-      emitMetadata: true,
-      theme: 'light',
-      inputPosition: 'bottom',
-      lang: 'zh-CN',
-      lazyLoading: true
-  })
+    commentPlugin({
+      provider: "Giscus",
+    }),
   ],
 });

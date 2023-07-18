@@ -789,6 +789,3 @@ static jlong JNI_VideoTrack_WrapSink(JNIEnv* jni,
 ## 参考
 
 - 《WebRTC Native 开发实战》
-
-
-<GiscusComment/>
