@@ -19,7 +19,7 @@ export default defineUserConfig({
     // 顶部导航条   
     navbar: [
       {text: '首页', link: '/pages/home.md',},
-      {text: 'WebRTC',link: '/pages/webrtc/WebRTC源码分析(一)Android相机采集.md',},
+      {text: 'WebRTC',link: '/pages/webrtc/README.md',},
     ],
     repo: 'https://github.com/yangkun19921001/AudioVideoBlogDoc',
     docsDir: 'docs/',
@@ -32,14 +32,15 @@ export default defineUserConfig({
       '/pages/webrtc/': [
         {
           children: [
-            'WebRTC源码分析(一)Android相机采集'
+           'WebRTC P2P 从原理到应用'
+          ,'WebRTC源码分析(一)Android相机采集'
           ,'WebRTC源码分析(二)Android视频硬件编码'
-          ,'WebRTC 源码分析 (三) PeerConnection Client'
-          ,'WebRTC P2P 从原理到应用'
+          ,'WebRTC源码分析(三)PeerConnection Client'
           ,'WebRTC实战 - P2P音视频通话'
-          ,'WebRTC 实战 - P2P架构的多人音视频通话解决方案'
+          ,'WebRTC实战 - P2P架构的多人音视频通话解决方案'
           ,'WebRTC实战 - QT for Windows 实现多人音视频通话'
           ,'WebRTC实战 - mediasoup架构的多人音视频通话解决方案'
+          ,'构建 WebRTC for IOS AppRTCMobile 项目'
         ],
         },
       ], 
@@ -47,16 +48,6 @@ export default defineUserConfig({
   }),
 
   plugins: [
-    // vuepress-plugin-comment2评论与阅读量插件
-    // commentPlugin({
-    //   // 插件选项
-    //   provider: "Giscus", //评论服务提供者。
-    //   comment: true, //启用评论功能
-    //   repo: "yangkun19921001/AudioVideoBlogDoc", //远程仓库
-    //   repoId: "R_kgDOJ8K9Rw", //对应自己的仓库Id
-    //   category: "Announcements",
-    //   categoryId: "DIC_kwDOJ8K9R84CX7pr" //对应自己的分类Id
-    // }),
     commentPlugin({
       provider: "Giscus",
     }),
