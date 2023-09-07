@@ -37,6 +37,7 @@ export default defineUserConfig({
           ,'WebRTC源码分析(二)Android视频硬件编码'
           ,'WebRTC源码分析(三)PeerConnection Client'
           ,'WebRTC源码分析(四) Android、IOS、Windows 视频数据流程分析'
+          ,'WebRTC源码分析(五)苹果设备相机采集'
           ,'WebRTC实战 - P2P音视频通话'
           ,'WebRTC实战 - P2P架构的多人音视频通话解决方案'
           ,'WebRTC实战 - QT for Windows 实现多人音视频通话'
